@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "acl": {
+        "*": {
+          "read": true,
+          "write": true
+        }
+      },
+      "createDate": {
+        "__type": "Date",
+        "iso": "2022-12-14T03:13:07.292Z"
+      },
+      "updateDate": {
+        "__type": "Date",
+        "iso": "2022-12-14T05:46:09.999Z"
+      },
+      "name": "Phone",
+      "image": "https://cdn.tgdd.vn//content/icon-phone-96x96-2.png",
+      "belongItem": "",
+      "objectId": "BOc4rs89FMCg3VNU"
+    },
+    {
+      "acl": {
+        "*": {
+          "read": true,
+          "write": true
+        }
+      },
+      "createDate": {
+        "__type": "Date",
+        "iso": "2022-12-14T03:13:15.816Z"
+      },
+      "updateDate": {
+        "__type": "Date",
+        "iso": "2022-12-15T03:44:50.203Z"
+      },
+      "name": "Tablet",
+      "image": "https://cdn.tgdd.vn//content/icon-tablet-96x96-1.png",
+      "belongItem": "",
+      "objectId": "VkaEkPrAaGc0TPBV"
+    },
+    {
+      "acl": {
+        "*": {
+          "read": true,
+          "write": true
+        }
+      },
+      "createDate": {
+        "__type": "Date",
+        "iso": "2022-12-14T03:13:29.424Z"
+      },
+      "updateDate": {
+        "__type": "Date",
+        "iso": "2022-12-15T03:45:02.961Z"
+      },
+      "name": "Smart Watch",
+      "image": "https://cdn.tgdd.vn//content/icon-smartwatch-96x96-1.png",
+      "belongItem": "",
+      "objectId": "J1pcd2cSyPkVYoXL"
+    },
+    {
+      "acl": {
+        "*": {
+          "read": true,
+          "write": true
+        }
+      },
+      "createDate": {
+        "__type": "Date",
+        "iso": "2022-12-14T03:13:41.465Z"
+      },
+      "updateDate": {
+        "__type": "Date",
+        "iso": "2022-12-15T03:45:11.395Z"
+      },
+      "name": "Laptop",
+      "image": "https://cdn.tgdd.vn//content/icon-laptop-96x96-1.png",
+      "belongItem": "",
+      "objectId": "TScCqm9yWsDBAca6"
+    }
+  ]
+}

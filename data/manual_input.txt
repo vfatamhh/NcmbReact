@@ -1,0 +1,11 @@
+Phone
+[{"__type":"Pointer","className":"Items","objectId":"XyrO8fcMk9V41if8"}, {"__type":"Pointer","className":"Items","objectId":"XyNprZRzp9fzxRC2"}, {"__type":"Pointer","className":"Items","objectId":"59ItCvuQaN2ZNign"}]
+
+Tablet
+[{"__type":"Pointer","className":"Items","objectId":"jkzzcbCLvP8K3Fhb"}, {"__type":"Pointer","className":"Items","objectId":"fKXjwriZRZBCBVb8"}, {"__type":"Pointer","className":"Items","objectId":"pGWSLt9WaPABq8zW"}]
+
+Smart Watch
+[{"__type":"Pointer","className":"Items","objectId":"PxYtXxaZGE0qexaY"}, {"__type":"Pointer","className":"Items","objectId":"rWE8fVKEZmS0QbTY"}]
+
+Laptop
+[{"__type":"Pointer","className":"Items","objectId":"rIX3qttNMKIvXlIm"}, {"__type":"Pointer","className":"Items","objectId":"jiosLRtAtxcLbmrW"}, {"__type":"Pointer","className":"Items","objectId":"B2RepIt8703Agjba"}]
