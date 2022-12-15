@@ -31,4 +31,4 @@ Replace above key in `App.js`
 
 ## Preview
 
-<img src="./image/demo.gift" />
+<img src="./image/demo.gif" />
