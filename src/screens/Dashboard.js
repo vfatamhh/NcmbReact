@@ -34,8 +34,20 @@ class Dashboard extends Component {
   onPress = (objectId) => {
     this.getItem(objectId);
   }
+  onLogout = () => {
+    try {
+      NCMBUser.logout();
+      this.props.navigation.reset({
+        index: 0,
+        routes: [{ name: 'StartScreen' }],
+      })
+    } catch(err) {
+      alert(JSON.stringify(err));
+    }
+  }
   async componentDidMount() {
      this.getCategory();
+     this.getItemInit();
   }
   async getCategory () {
     const obj = new NCMBObject('Category');
@@ -57,6 +69,14 @@ class Dashboard extends Component {
     console.log(JSON.stringify(ary));
     
   }
+  async getItemInit() {
+    const obj = new NCMBObject('Items');
+    await obj.fetch();
+    setTimeout(() => {
+      this.setState({data: obj.get('results')});
+    }, 1000)
+  }
+
   render() {
     var display = this.state.data.map((item)=> {
       return (
@@ -88,8 +108,9 @@ class Dashboard extends Component {
 
     return (
       // <Background>
+      
       <View style={styles.container}>
-          <BackButton goBack={navigation.goBack} />
+        {/* <BackButton goBack={this.props.navigation.goBack} /> */}
         <FlatList
           style = {styles.categories}
           horizontal
@@ -105,6 +126,12 @@ class Dashboard extends Component {
         />
         <View style = {styles.item}>{display}</View>
         <View><Text>{this.state.total}</Text></View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>{this.onLogout()}}
+        >
+          <Text>Logout</Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -124,6 +151,7 @@ const styles = StyleSheet.create({
   },
 
   categories: {
+    marginTop: 56,
     height: 56,
   },
   item: {

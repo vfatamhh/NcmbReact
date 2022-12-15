@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react'
 import { Provider } from 'react-native-paper'
 import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,32 +19,31 @@ import {
   Dashboard,
 } from './src/screens'
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
-  );
-}
-
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
-
 const Stack = createNativeStackNavigator();
 
 function App() {
+
+  const [isLogged, setIsLogged] = useState(false);
+
+  (async () => {
+    try {
+      const user = await NCMBUser.currentUser();
+      console.log(user);
+      if (!user) {
+        setIsLogged(true);
+      }
+   }
+   catch(err) {
+      setIsLogged(false);
+   }
+   console.log(isLogged);
+  })();
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="StartScreen"
+      
+      <Stack.Navigator
+        initialRouteName={isLogged ? 'Dashboard' : 'StartScreen'}
         screenOptions={{
           headerShown: false,
         }}
@@ -57,9 +56,6 @@ function App() {
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
           />
-
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
